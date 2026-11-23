@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>FluxFX Original · 像素特效室</title><link rel="stylesheet" href="./studio.css"></head>
+<body>
+<header><div class="logo"><i aria-hidden="true">✦</i> FluxFX <b>Original</b></div><span>像素特效室</span></header>
+<main>
+<section class="workspace">
+<div class="titlebar"><div><small id="english">Orrery breach</small><h1 id="title">星盘解封</h1></div><span class="resolution" id="resolution">160 × 112 px</span></div>
+<div class="stage-controls" aria-label="视口图层">
+<label><input id="actor" type="checkbox"> 角色</label><label><input id="anchors" type="checkbox"> 锚点</label>
+<label><input id="back" type="checkbox" checked> 后层</label><label><input id="front" type="checkbox" checked> 前层</label><label><input id="light" type="checkbox" checked> 光照</label>
+</div>
+<div class="panel" id="panel"><canvas width="160" height="112" id="view" tabindex="0" aria-label="像素特效视口，点击或按方向键移动锚点"></canvas></div>
+<div class="timeline"><button id="play">暂停</button><button id="replay">重播</button><input id="scrub" type="range" value="0" min="0" step="0.001" aria-label="动画时间轴"><output id="clock"></output></div>
+<div id="markers" class="markers" aria-label="时间轴标记" hidden></div>
+<footer class="stage-footer"><span id="performance"></span><button id="reset-anchor" type="button">重置锚点</button></footer>
+</section>
+<aside><h2>特效库</h2><nav id="catalog" aria-label="切换特效"></nav><h2 class="sub">预览设置</h2>
+<label>速度<select id="speed"><option>0.25</option><option>0.5</option><option selected>1</option><option>2</option></select></label>
+<label>随机种子<input type="number" value="23" step="1" id="seed"></label>
+<label>背景<select id="bg"><option value="ink">深靛</option><option value="paper">浅灰</option><option value="check">透明网格</option></select></label>
+<label>质量<select id="quality"><option value="full">完整</option><option value="low">精简</option></select></label>
+<label>水平镜像<input id="mirror" type="checkbox"></label>
+<label>循环播放<input id="repeat" type="checkbox" checked></label>
+<div class="exports"><button id="save">保存透明 PNG</button><button id="sheet">导出精灵图 ZIP</button><p id="export-status" role="status" hidden></p></div></aside>
+</main><script type="module" src="./studio.js"></script></body></html>

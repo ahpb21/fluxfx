@@ -1,0 +1,13 @@
+{
+  "name": "fluxfx-original",
+  "version": "0.2.0",
+  "description": "Deterministic, layered pixel effects for web games, with a live studio and sprite-sheet export.",
+  "type": "module",
+  "private": true,
+  "types": "./index.d.ts",
+  "exports": { ".": { "types": "./index.d.ts", "default": "./index.js" } },
+  "bin": { "fluxfx": "./tools/export.mjs" },
+  "engines": { "node": ">=20" },
+  "files": ["*.js", "*.d.ts", "index.html", "studio.css", "server.mjs", "tools/*.mjs", "docs", ".agents/skills/fluxfx-vfx", "THIRD-PARTY-NOTICES.md"],
+  "scripts": { "start": "node server.mjs", "test": "node --test", "export": "node tools/export.mjs", "bench": "node tools/bench.mjs" }
+}
